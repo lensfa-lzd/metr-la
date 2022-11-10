@@ -29,13 +29,16 @@ https://github.com/hazdzz/STGCN
     4 2012-03-01 00:20:00         4          3  Thursday
   ```
   
-- `adj.pth`: torch tensor, weighted connectivity graph with self loop  
-  ```
-  shape (n_vertex, n_vertex), (207, 207)
+- `adj.pth`: torch tensor, weighted connectivity graph with self loop
+
   build by using thresholded Gaussian kernel (Shuman et al., 2013)
+
   $$
     {{\rm{W}}_{ij}} = \exp ( - \frac{{dist{{({v_i},{v_j})}^2}}}{{{\sigma ^2}}})
   $$
+
   and if dist > threshold, the value is set to 0,
   Threshold is assigned to 0.1 in this case.
+  ```
+  shape (n_vertex, n_vertex), (207, 207)
   ```
