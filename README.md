@@ -42,3 +42,18 @@ https://github.com/hazdzz/STGCN
   ```
   shape (n_vertex, n_vertex), (207, 207)
   ```
+  
+## Load Data
+
+```python
+import torch
+import pandas as pd
+
+data = torch.load('vel.pth')
+time_index = pd.read_hdf('time_index.h5')
+adj = torch.load('adj.pth')
+
+print(data.shape, time_index.shape, adj.shape)
+print(time_index.head())
+```
+
